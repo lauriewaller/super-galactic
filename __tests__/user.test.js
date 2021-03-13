@@ -32,9 +32,8 @@ describe ('User', () => {
     expect(currentUser.jupiterAge).toEqual(438.82);
   });
 
-  test('should correctly calculate life expactancy on mercury, venus, mars, and jupiter', () => {
-    currentUser.determineLifeExpectancy();
-    expect(mercury).toEqual(9.6);
+  test('should correctly calculate life expectancy on mercury, venus, mars, and jupiter', () => {
+    expect(currentUser.determineLifeExpectancy()).toEqual(9.6);
   });
 
 });

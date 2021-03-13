@@ -11,5 +11,6 @@ export default class User {
 
   determineLifeExpectancy() {
     let mercury = (this.lifeExpectancy - this.earthAge) * .24;
+    return mercury;
   }
 };
