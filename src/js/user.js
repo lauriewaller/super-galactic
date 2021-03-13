@@ -18,7 +18,7 @@ export default class User {
   }
 
   determineMarsLifeExpectancy() {
-    //return (this.lifeExpectancy - this.earthAge) * .1.88;
+    return (this.lifeExpectancy - this.earthAge) * 1.88;
   }
 
 };
