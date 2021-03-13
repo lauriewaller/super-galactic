@@ -14,6 +14,7 @@ export default class User {
   }
 
   determineVenusLifeExpectancy() {
+    return (this.lifeExpectancy - this.earthAge) * .62;
   }
 
 };
