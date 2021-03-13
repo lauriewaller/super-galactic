@@ -6,5 +6,10 @@ export default class User {
     this.mercuryAge = earthAge * .24;
     this.venusAge = earthAge * .62;
     this.marsAge = earthAge * 1.88;
+    this.jupiterAge = earthAge * 11.86;
+  }
+
+  determineLifeExpectancy() {
+    let mercury = (this.lifeExpectancy - this.earthAge) * .24;
   }
 };

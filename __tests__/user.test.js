@@ -33,7 +33,7 @@ describe ('User', () => {
   });
 
   test('should correctly calculate life expactancy on mercury, venus, mars, and jupiter', () => {
-    currentUser.lifeExpectancy();
+    currentUser.determineLifeExpectancy();
     expect(mercury).toEqual(9.6);
   });
 
