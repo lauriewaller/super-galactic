@@ -22,7 +22,7 @@ export default class User {
   }
 
   determineJupiterLifeExpectancy() {
-    //return (this.lifeExpectancy - this.earthAge) * 11.86;
+    return (this.lifeExpectancy - this.earthAge) * 11.86;
   }
 
 };
