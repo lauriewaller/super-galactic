@@ -9,8 +9,7 @@ export default class User {
     this.jupiterAge = earthAge * 11.86;
   }
 
-  determineLifeExpectancy() {
-    let mercury = (this.lifeExpectancy - this.earthAge) * .24;
-    return mercury;
+  determineMarsLifeExpectancy() {
+    return (this.lifeExpectancy - this.earthAge) * .24;
   }
 };
