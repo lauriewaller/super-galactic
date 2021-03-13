@@ -5,6 +5,6 @@ export default class User {
     this.lifeExpectancy = lifeExpectancy;
     this.mercuryAge = earthAge * .24;
     this.venusAge = earthAge * .62;
-    this.jupiterAge = earthAge * 11.86;
+    this.marsAge = earthAge * 1.88;
   }
 };
