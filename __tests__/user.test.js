@@ -17,7 +17,7 @@ describe ('User', () => {
   });
 
   test('should correctly create an object with mercuryAge property using the Object constructor', () => {
-    expect(currentUser.mercuryAge).toEqual(8.88);
+    expect(currentUser.mercuryAge).toEqual(8.879999999999999);
   });
 
   test('should correctly create an object with venusAge property using the Object constructor', () => {
