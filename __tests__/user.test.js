@@ -40,4 +40,8 @@ describe ('User', () => {
     expect(currentUser.determineVenusLifeExpectancy()).toEqual(24.8);
   });
 
+  test('should correctly calculate life expectancy on mars', () => {
+    expect(currentUser.determineMarsLifeExpectancy()).toEqual(75.2);
+  });
+
 });
