@@ -12,4 +12,8 @@ describe ('User', () => {
       expect(currentUser.earthAge).toEqual(37);
     });
 
+    test('should correctly create an object with lifeExpectancy property using the Object constructor', () => {
+      expect(currentUser.lifeExpectancy).toEqual(77);
+    });
+
 });
