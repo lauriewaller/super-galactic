@@ -3,26 +3,26 @@ export default class User {
   constructor(earthAge, lifeExpectancy) {
     this.earthAge = earthAge;
     this.lifeExpectancy = lifeExpectancy;
-    this.mercuryAge = earthAge * .24;
-    this.venusAge = earthAge * .62;
-    this.marsAge = earthAge * 1.88;
-    this.jupiterAge = earthAge * 11.86;
+    this.mercuryAge = Math.ceil(earthAge * .24);
+    this.venusAge = Math.ceil(earthAge * .62);
+    this.marsAge = Math.ceil(earthAge * 1.88);
+    this.jupiterAge = Math.ceil(earthAge * 11.86);
   }
 
   determineMercuryLifeExpectancy() {
-    return (this.lifeExpectancy - this.earthAge) * .24;
+    return Math.ceil((this.lifeExpectancy - this.earthAge) * .24);
   }
 
   determineVenusLifeExpectancy() {
-    return (this.lifeExpectancy - this.earthAge) * .62;
+    return Math.ceil((this.lifeExpectancy - this.earthAge) * .62);
   }
 
   determineMarsLifeExpectancy() {
-    return (this.lifeExpectancy - this.earthAge) * 1.88;
+    return Math.ceil((this.lifeExpectancy - this.earthAge) * 1.88);
   }
 
   determineJupiterLifeExpectancy() {
-    return (this.lifeExpectancy - this.earthAge) * 11.86;
+    return Math.ceil((this.lifeExpectancy - this.earthAge) * 11.86);
   }
 
-};
+}
