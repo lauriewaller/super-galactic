@@ -16,19 +16,18 @@ $("form#user-info").submit(function(event) {
   let marsLifeExpect = currentUser.determineMarsLifeExpectancy();
   let jupiterLifeExpect = currentUser.determineJupiterLifeExpectancy();
 
-
   $("#show-result").show();
   $('#mercury-age').text(currentUser.mercuryAge);
   $('#venus-age').text(currentUser.venusAge);
   $('#mars-age').text(currentUser.marsAge);
   $('#jupiter-age').text(currentUser.jupiterAge);
-
-  if (User.lifeExpectancy > User.earthAge) {
+  
+  if (currentUser.lifeExpectancy < currentUser.earthAge) {
     $('#anomaly').show();
-    // $('#mercury-life-expect').text(mercuryLifeExpect);
-    // $('#venus-life-expect').text(venusLifeExpect);
-    // $('#mars-life-expect').text(marsLifeExpect);
-    // $('#jupiter-life-expect').text(jupiterLifeExpect);
+    $('#mercury-anomaly').text(Math.abs(mercuryLifeExpect));
+    $('#venus-anomaly').text(Math.abs(venusLifeExpect));
+    $('#mars-anomaly').text(Math.abs(marsLifeExpect));
+    $('#jupiter-anomaly').text(Math.abs(jupiterLifeExpect));
   } else {
     $('#life-expectancy').show();
     $('#mercury-life-expect').text(mercuryLifeExpect);
@@ -36,9 +35,5 @@ $("form#user-info").submit(function(event) {
     $('#mars-life-expect').text(marsLifeExpect);
     $('#jupiter-life-expect').text(jupiterLifeExpect);
   }
-
-  
-
-
-  
+ 
 });
