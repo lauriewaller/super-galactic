@@ -1,7 +1,16 @@
-body {
+/* body {
   background-color: azure;
 }
+*/
 
-#show-contact {
+#show-result {
   display: none;
-}
+} 
+
+#life-expectancy {
+  display: none;
+} 
+
+#anomaly{
+  display: none;
+} 

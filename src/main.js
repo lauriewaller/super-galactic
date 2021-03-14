@@ -22,10 +22,20 @@ $("form#user-info").submit(function(event) {
   $('#venus-age').text(currentUser.venusAge);
   $('#mars-age').text(currentUser.marsAge);
   $('#jupiter-age').text(currentUser.jupiterAge);
-  $('#mercury-life-expect').text(mercuryLifeExpect);
-  $('#venus-life-expect').text(venusLifeExpect);
-  $('#mars-life-expect').text(marsLifeExpect);
-  $('#jupiter-life-expect').text(jupiterLifeExpect);
+
+  if (User.lifeExpectancy > User.earthAge) {
+    $('#anomaly').show();
+    // $('#mercury-life-expect').text(mercuryLifeExpect);
+    // $('#venus-life-expect').text(venusLifeExpect);
+    // $('#mars-life-expect').text(marsLifeExpect);
+    // $('#jupiter-life-expect').text(jupiterLifeExpect);
+  } else {
+    $('#life-expectancy').show();
+    $('#mercury-life-expect').text(mercuryLifeExpect);
+    $('#venus-life-expect').text(venusLifeExpect);
+    $('#mars-life-expect').text(marsLifeExpect);
+    $('#jupiter-life-expect').text(jupiterLifeExpect);
+  }
 
   
 
