@@ -48,4 +48,16 @@ describe ('User', () => {
     expect(currentUser.determineJupiterLifeExpectancy()).toEqual(475);
   });
 
+  test('should correctly return false if user life expectancy is greater than their age', () => {    
+    expect(findLifeExpectancy()).toEqual(false);
+  });
+
+  // findLifeExpectancy() {
+  //   if (this.lifeExpectancy < this.earthAge) {
+  //     return true;
+  //   } else if (this.lifeExpectancy > this.earthAge) {
+  //     return false;
+  //   }
+  // }
+
 });
