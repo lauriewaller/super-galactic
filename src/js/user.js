@@ -10,23 +10,27 @@ export default class User {
   }
 
   findLifeExpectancy() {
-
+    if (this.earthAge < this.lifeExpectancy) {
+      return true;
+    } else if (this.earthAge > this.lifeExpectancy) {
+      return false;
+    }
   }
 
   determineMercuryLifeExpectancy() {
-    return Math.ceil((this.lifeExpectancy - this.earthAge) * .24);
+    return Math.abs(Math.ceil((this.lifeExpectancy - this.earthAge) * .24));
   }
 
   determineVenusLifeExpectancy() {
-    return Math.ceil((this.lifeExpectancy - this.earthAge) * .62);
+    return Math.abs(Math.ceil((this.lifeExpectancy - this.earthAge) * .62));
   }
 
   determineMarsLifeExpectancy() {
-    return Math.ceil((this.lifeExpectancy - this.earthAge) * 1.88);
+    return Math.abs(Math.ceil((this.lifeExpectancy - this.earthAge) * 1.88));
   }
 
   determineJupiterLifeExpectancy() {
-    return Math.ceil((this.lifeExpectancy - this.earthAge) * 11.86);
+    return Math.abs(Math.ceil((this.lifeExpectancy - this.earthAge) * 11.86));
   }
 
 }
