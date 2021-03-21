@@ -9,6 +9,10 @@ export default class User {
     this.jupiterAge = Math.ceil(earthAge * 11.86);
   }
 
+  findLifeExpectancy() {
+
+  }
+
   determineMercuryLifeExpectancy() {
     return Math.ceil((this.lifeExpectancy - this.earthAge) * .24);
   }
