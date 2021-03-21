@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import User from './../src/js/user.js';
 
 describe ('User', () => {
@@ -9,8 +10,8 @@ describe ('User', () => {
   });
 
   test('should correctly create an object with earthAge property using the Object constructor', () => {
-      expect(currentUser.earthAge).toEqual(37);
-    });
+    expect(currentUser.earthAge).toEqual(37);
+  });
 
   test('should correctly create an object with lifeExpectancy property using the Object constructor', () => {
     expect(currentUser.lifeExpectancy).toEqual(77);
@@ -47,17 +48,15 @@ describe ('User', () => {
   test('should correctly calculate life expectancy on jupiter', () => {
     expect(currentUser.determineJupiterLifeExpectancy()).toEqual(475);
   });
+});
 
-  test('should correctly return false if user life expectancy is greater than their age', () => {    
-    expect(currentUser.findLifeExpectancy()).toEqual(false);
+describe ('User', () => {
+  test('should correctly return false if user age is less than their life expectancy', () => {    
+    let currentUser2 = new User(30, 40);
+    expect(currentUser2.findLifeExpectancy()).toEqual(true);
   });
-
-  // findLifeExpectancy() {
-  //   if (this.lifeExpectancy < this.earthAge) {
-  //     return true;
-  //   } else if (this.lifeExpectancy > this.earthAge) {
-  //     return false;
-  //   }
-  // }
-
+  test('should correctly return true if user age is greater than their life expectancy', () => {    
+    let currentUser3 = new User(40, 30);
+    expect(currentUser3.findLifeExpectancy()).toEqual(false);
+  });
 });
