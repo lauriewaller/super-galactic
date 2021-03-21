@@ -49,7 +49,7 @@ describe ('User', () => {
   });
 
   test('should correctly return false if user life expectancy is greater than their age', () => {    
-    expect(findLifeExpectancy()).toEqual(false);
+    expect(currentUser.findLifeExpectancy()).toEqual(false);
   });
 
   // findLifeExpectancy() {
