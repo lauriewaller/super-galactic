@@ -33,7 +33,7 @@ This application takes in the user's age and their life expectancy. It then retu
 
 ## Setup/Installation Requirements
 
-  1. Go to the main page of the repository (https://github.com/lauriewaller/super-galactic-application)
+  1. Go to the main page of the repository (https://github.com/lauriewaller/super-galactic)
   2. In the top righthand corner of the list of files, click the Code dropdown menu.
   3. Click on the clipboard icon to copy the URL to the GitHub repo.
   4. On your computer, open Terminal and navigate to the folder where you plan to clone the repo folder.
